@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0}
+        div.box{display: flex;border:1px solid black;}
+        div.item{height:100px;line-height:100px;text-align:center;}
+        .basis-50{flex-basis:50px }
+        .basis-100{flex-basis:100px }
+        .basis-150{flex-basis:150px }
+        .basis-200{flex-basis:200px }
+        div.box>.item:nth-child(1){background: red;width:150px}
+        div.box>.item:nth-child(2){background: green;width: 170px}
+        div.box>.item:nth-child(3){background: yellow;width:150px}
+        div.box>.item:nth-child(4){background: blue;width: 140px}
+    </style>
+
+</head>
+<body>
+Container的宽度为500px,所有item的basis总宽度也为500px,500px>=500px,所有每个item可以直接使用basis宽度 <br>
+<div class="box" style="width:500px;">
+    <div class="item basis-200">basis为200px</div>
+    <div class="item basis-100">basis为100px</div>
+    <div class="item basis-100">basis为100px</div>
+    <div class="item basis-100">basis为100px</div>
+</div>
+Container的宽度为300px,所有item的basis总宽度也为500px,300px>=500px,"溢出宽度"为200px,所有每个item最后的宽度会通过basis宽度对应的缩小比例来计算: <br>
+1.所有item的basis总宽度为:200+100+100+100=500px,对应的缩小宽度比例分别为 0.4,0.2,0.2,0.2。<br>
+2.对应的缩小宽度分别为200*0.4=80px,200*0.2=40px,200*0.2=40px,200*0.2=40px <br>
+3.最后的宽度为200-80=120px,100-40=60px,100-40=60px,100-40=60px
+<div class="box" style="width:300px;">
+    <div class="item basis-200">basis为200px</div>
+    <div class="item basis-100">basis为100px</div>
+    <div class="item basis-100">basis为100px</div>
+    <div class="item basis-100">basis为100px</div>
+</div>
+
+
+</body>
+</html>

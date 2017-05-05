@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0}
+        div.box{display: flex}
+        .row{flex-direction: row}
+        .row-reverse{flex-direction: row-reverse}
+        .column{flex-direction: column}
+        .column-reverse{flex-direction: column-reverse}
+        div.item{width:100px;height:100px;line-height:100px;text-align:center;background: yellow}
+
+    </style>
+</head>
+<body>
+row(默认值):
+<div class="box rwo">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+</div>
+row-reverse:
+<div class="box row-reverse">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+</div>
+column:
+<div class="box column">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+</div>
+column-reverse:
+<div class="box column-reverse">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+</div>
+</body>
+</html>

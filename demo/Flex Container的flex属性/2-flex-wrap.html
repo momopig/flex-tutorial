@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0}
+        div.box{display: flex}
+        .nowrap{flex-wrap: nowrap}
+        .wrap{flex-wrap: wrap}
+        .wrap-reverse{flex-wrap: wrap-reverse}
+        div.item{width:200px;height:200px;line-height:100px;text-align:center;background: yellow}
+
+    </style>
+</head>
+<body>
+nowrap(默认值):
+<div class="box nowrap">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+    <div class="item">row-5</div>
+    <div class="item">row-6</div>
+    <div class="item">row-7</div>
+    <div class="item">row-8</div>
+    <div class="item">row-9</div>
+</div>
+wrap:
+<div class="box wrap">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+    <div class="item">row-5</div>
+    <div class="item">row-6</div>
+    <div class="item">row-7</div>
+    <div class="item">row-8</div>
+    <div class="item">row-9</div>
+</div>
+wrap-reverse:
+<div class="box wrap-reverse">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+    <div class="item">row-5</div>
+    <div class="item">row-6</div>
+    <div class="item">row-7</div>
+    <div class="item">row-8</div>
+    <div class="item">row-9</div>
+</div>
+
+</body>
+</html>

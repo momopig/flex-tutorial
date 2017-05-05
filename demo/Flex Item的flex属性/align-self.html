@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0}
+        div.box{display: flex;width:300px;height:200px; border:1px solid red}
+        .flex-start{align-items: flex-start}
+        .flex-end{align-items: flex-end}
+        .center{align-items:center}
+        div.item{text-align:center;background: yellow}
+        div>.item:nth-child(1){width:50px;height:100px;line-height:100px;}
+        div>.item:nth-child(2){width:50px;height:50px;line-height:50px;}
+        /*item-3覆盖Container的align-items设置*/
+        div>.item:nth-child(3){width:50px;height:80px;line-height:80px;align-self: center}
+        div>.item:nth-child(4){width:50px;height:20px;line-height:20px;}
+        div.stretch>.item{height:auto;line-height:normal}
+
+    </style>
+</head>
+<body>
+item-3覆盖Container的align-items设置:改为center
+<div class="box flex-start">
+    <div class="item">item-1</div>
+    <div class="item">item-2</div>
+    <div class="item">item-3</div>
+    <div class="item">item-4</div>
+</div>
+item-3覆盖Container的align-items设置:改为center
+<div class="box flex-end">
+    <div class="item">item-1</div>
+    <div class="item">item-2</div>
+    <div class="item">item-3</div>
+    <div class="item">item-4</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0}
+        div.box{display: flex;border: 1px solid red}
+        .flex-start{justify-content: flex-start}
+        .flex-end{justify-content: flex-end}
+        .center{justify-content:center}
+        .space-between{justify-content: space-between}
+        .space-around{justify-content: space-around}
+        div.item{width:100px;height:100px;line-height:100px;text-align:center;background: yellow}
+
+    </style>
+</head>
+<body>
+flex-start(默认值):
+<div class="box flex-start">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+</div>
+flex-end:
+<div class="box flex-end">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+</div>
+center:
+<div class="box center">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+</div>
+space-between:
+<div class="box space-between">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+</div>
+space-around:
+<div class="box space-around">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+</div>
+</body>
+</html>

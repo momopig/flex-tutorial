@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0}
+        div.box{display: flex}
+        .row{flex-direction: row}
+        .row-reverse{flex-direction: row-reverse}
+        .column{flex-direction: column}
+        .column-reverse{flex-direction: column-reverse}
+        div.item{width:200px;height:100px;line-height:100px;text-align:center;background: yellow}
+
+    </style>
+</head>
+<body>
+row(默认值):
+<div class="box rwo">
+    <div class="item" style="order:4">block-1,order为4</div>
+    <div class="item" style="order:-1">block-2,order为-1</div>
+    <div class="item" style="order:5">block-3,order为5</div>
+</div>
+row-reverse:
+<div class="box row-reverse">
+    <div class="item" style="order:4">block-1,order为4</div>
+    <div class="item" style="order:-1">block-2,order为-1</div>
+    <div class="item" style="order:5">block-3,order为5</div>
+</div>
+column:
+<div class="box column">
+    <div class="item" style="order:4">block-1,order为4</div>
+    <div class="item" style="order:-1">block-2,order为-1</div>
+    <div class="item" style="order:5">block-3,order为5</div>
+</div>
+column-reverse:
+<div class="box column-reverse">
+    <div class="item" style="order:4">block-1,order为4</div>
+    <div class="item" style="order:-1">block-2,order为-1</div>
+    <div class="item" style="order:5">block-3,order为5</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0}
+        div.box{display: flex;width:400px;border:1px solid black;}
+        div.item{height:100px;line-height:100px;text-align:center;}
+        .shrink-1{flex-shrink:1 }
+        .shrink-2{flex-shrink:2 }
+        .shrink-3{flex-shrink:3 }
+        div.box>.item:nth-child(1){background: red;width:150px}
+        div.box>.item:nth-child(2){background: green;width: 170px}
+        div.box>.item:nth-child(3){background: yellow;width:150px}
+        div.box>.item:nth-child(4){background: blue;width: 140px}
+    </style>
+
+</head>
+<body>
+1.Flex Container的宽度为400px,所有Item的总宽为610px,也就是说有210px宽度溢出,称之为"溢出宽度"; <br>
+2.所有Item的shrink总和为7,可知"溢出宽度"被平分为7份,即每份30px,称之为"单元收缩宽度";<br>
+3.每个Item根据shrink值*"单元收缩宽度",算出最后"应缩减宽度",再用"原来宽度"减之,得出"最后宽度";<br>
+4.item-1的"应缩减宽度"为1*30=30px,"最后宽度"为150-30=120px;<br>
+   item-2的"应缩减宽度"为3*30=90px,"最后宽度"为170-90=80px;<br>
+   item-3的"应缩减宽度"为2*30=60px,"最后宽度"为150-60=90px;<br>
+   item-4的"应缩减宽度"为1*30=30px,"最后宽度"为140-30=110px;<br>
+<div class="box">
+    <div class="item shrink-1">shrink为1</div>
+    <div class="item shrink-3">shrink为3</div>
+    <div class="item shrink-2">shrink为2</div>
+    <div class="item shrink-1">shrink为1</div>
+</div>
+</body>
+</html>

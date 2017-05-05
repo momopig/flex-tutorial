@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0}
+        div.box{display: flex;width:400px;height:800px; border:1px solid red; flex-wrap:wrap}
+        .flex-start{align-content: flex-start}
+        .flex-end{align-content: flex-end}
+        .center{align-content:center}
+        .space-between{align-content: space-between}
+        .space-around{align-content: space-around}
+        div.item{width:200px;height:50px;line-height:50px;text-align:center;background: yellow}
+        div>.item{position:relative}
+        div.stretch>.item{height:auto;line-height:normal}
+
+    </style>
+</head>
+<body>
+flex-start(默认值):
+<div class="box flex-start">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+    <div class="item">row-5</div>
+    <div class="item">row-6</div>
+    <div class="item">row-7</div>
+    <div class="item">row-8</div>
+    <div class="item">row-9</div>
+    <div class="item">row-10</div>
+    <div class="item">row-11</div>
+    <div class="item">row-12</div>
+</div>
+flex-end:
+<div class="box flex-end">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+    <div class="item">row-5</div>
+    <div class="item">row-6</div>
+    <div class="item">row-7</div>
+    <div class="item">row-8</div>
+    <div class="item">row-9</div>
+    <div class="item">row-10</div>
+    <div class="item">row-11</div>
+    <div class="item">row-12</div>
+</div>
+center:
+<div class="box center">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+</div>
+space-between:
+<div class="box space-between">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+    <div class="item">row-5</div>
+    <div class="item">row-6</div>
+    <div class="item">row-7</div>
+    <div class="item">row-8</div>
+    <div class="item">row-9</div>
+    <div class="item">row-10</div>
+    <div class="item">row-11</div>
+    <div class="item">row-12</div>
+</div>
+space-around:
+<div class="box space-around">
+    <div class="item">row-1</div>
+    <div class="item">row-2</div>
+    <div class="item">row-3</div>
+    <div class="item">row-4</div>
+    <div class="item">row-5</div>
+    <div class="item">row-6</div>
+    <div class="item">row-7</div>
+    <div class="item">row-8</div>
+    <div class="item">row-9</div>
+    <div class="item">row-10</div>
+    <div class="item">row-11</div>
+    <div class="item">row-12</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding:0}
+        div.box{display: flex;border:1px solid black}
+        .row{flex-direction: row}
+        .row-reverse{flex-direction: row-reverse}
+        .column{flex-direction: column}
+        .column-reverse{flex-direction: column-reverse}
+        div.item{width:200px;height:100px;line-height:100px;text-align:center;}
+        .grow-1{flex-grow:1 }
+        .grow-2{flex-grow:2 }
+        .grow-3{flex-grow:3 }
+        div.box>.item:nth-child(1){background: red}
+        div.box>.item:nth-child(2){background: green}
+        div.box>.item:nth-child(3){background: yellow}
+        div.box>.item:nth-child(4){background: blue}
+
+        div.box.test{height:120px}
+        div.box.test>.item:nth-child(1){background: red;height:20px;line-height:20px}
+        div.box.test>.item:nth-child(2){background: green;height:30px;line-height:30px}
+        div.box.test>.item:nth-child(3){background: yellow;height:100px;line-height:100px}
+        div.box.test>.item:nth-child(4){background: blue;height:60px;line-height:60px}
+    </style>
+</head>
+<body>
+剩余的宽度空间被等分为0份,每个块分得的份数为:0,0,0,0:
+<div class="box rwo">
+    <div class="item">grow为0</div>
+    <div class="item">grow为0</div>
+    <div class="item">grow为0</div>
+    <div class="item">grow为0</div>
+</div>
+剩余的宽度空间被等分为1份,每个块分得的份数为:1,0,0,0:
+<div class="box rwo">
+    <div class="item grow-1">grow为1</div>
+    <div class="item">grow为0</div>
+    <div class="item">grow为0</div>
+    <div class="item">grow为0</div>
+</div>
+剩余的宽度空间被等分为4份,每个块分得的份数为:1,1,1,1:
+<div class="box rwo">
+    <div class="item grow-1">grow为1</div>
+    <div class="item grow-1">grow为1</div>
+    <div class="item grow-1">grow为1</div>
+    <div class="item grow-1">grow为1</div>
+</div>
+剩余的宽度空间被等分为7份,每个块分得的份数为:1,2,3,1:
+<div class="box rwo">
+    <div class="item grow-1">grow为1</div>
+    <div class="item grow-2">grow为2</div>
+    <div class="item grow-3">grow为3</div>
+    <div class="item grow-1">grow为1</div>
+</div>
+<div class="box rwo test">
+    <div class="item grow-1">grow为1</div>
+    <div class="item grow-2">grow为2</div>
+    <div class="item grow-3">grow为3</div>
+    <div class="item grow-1">grow为1</div>
+</div>
+</body>
+</html>
+
